@@ -1,6 +1,6 @@
 {
   "name": "scramble-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Yomotsu",
   "license": "MIT",
   "main": "dist/ScrambleText.js",
