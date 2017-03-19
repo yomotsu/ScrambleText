@@ -32,7 +32,7 @@
 			this.el = el;
 			this.timeOffset = option.timeOffset || 50;
 			this.fps = option.fps || 60;
-			this.chars = option.chars || ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '!', '#', '$', '%', '&', ':', ';', '<', '>', '?', '@', '[', ']', '^', '_', '{', '|', '}', '~'];
+			this.chars = option.chars || ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '!', '#', '$', '%', '&', ':', ';', '?', '@', '[', ']', '^', '_', '{', '|', '}', '~'];
 			this.callback = typeof option.callback === 'function' ? option.callback : function () {};
 			this.play();
 
