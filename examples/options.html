@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>=^.^=</title>
+</head>
+<body>
+<p><a href="https://github.com/yomotsu/ScrambleText">GitHub repo</a></p>
+
+<p id="text">
+	あいうえお<br>漢字<br>Scramble Text
+</p>
+
+<button type="button" onclick="scrambleText.play().start();">play and start</button>
+<button type="button" onclick="scrambleText.stop()">stop</button>
+
+
+<script src="../dist/ScrambleText.js"></script>
+<script>
+var scrambleText = new ScrambleText(
+	document.getElementById( 'text' ),
+	{
+		timeOffset : 200,
+		chars: [
+			'安','以','宇','衣','於',
+			'加','幾','久','計','己',
+			'左','之','寸','世','曽',
+			'太','知','川','天','止',
+			'奈','仁','奴','称','乃',
+			'波','比','不','部','保',
+			'末','美','武','女','毛',
+			'也','為','由','恵','与',
+			'良','利','留','礼','呂',
+			'和','遠','无'
+		],
+		callback: function () { console.log( 'ended' ); }
+	}
+).stop();
+</script>
+
+</body>
+</html>

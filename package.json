@@ -1,0 +1,30 @@
+{
+  "name": "scramble-text",
+  "version": "0.2.2",
+  "author": "Yomotsu",
+  "license": "MIT",
+  "main": "dist/ScrambleText.js",
+  "repository": "yomotsu/ScrambleText",
+  "jsnext:main": "dist/ScrambleText.module.js",
+  "module": "dist/ScrambleText.module.js",
+  "dependencies": {
+    "pako": "^1.0.4"
+  },
+  "devDependencies": {
+    "babel-preset-env": "1.1.10",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-watch": "^3.2.2",
+    "uglify-js": "^2.6.0"
+  },
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "rollup --config --watch",
+    "build": "rollup --config",
+    "release": "rollup -c && uglifyjs dist/ScrambleText.js -cm --preamble \"`/*!\n * ScrambleText\n * (c) 2017 @yomotsu\n * Released under the MIT License.\n */`\" > dist/ScrambleText.min.js"
+  },
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  }
+}
