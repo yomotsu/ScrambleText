@@ -73,9 +73,9 @@ function anim () {
 
 	const elapsedTime = Date.now() - this._startTime;
 	const deltaTime   = elapsedTime - this._elapsedTime;
-	const needUpdate = 1000 / this.fps <= deltaTime;
+	const needsUpdate = 1000 / this.fps <= deltaTime;
 
-	if ( ! needUpdate ) {
+	if ( ! needsUpdate ) {
 
 		requestAnimationFrame( this._anim );
 		return;

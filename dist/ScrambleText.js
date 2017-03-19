@@ -1,5 +1,6 @@
 /*!
  * ScrambleText
+ * https://github.com/yomotsu/ScrambleText
  * (c) 2017 @yomotsu
  * Released under the MIT License.
  */
@@ -81,9 +82,9 @@
 
 		var elapsedTime = Date.now() - this._startTime;
 		var deltaTime = elapsedTime - this._elapsedTime;
-		var needUpdate = 1000 / this.fps <= deltaTime;
+		var needsUpdate = 1000 / this.fps <= deltaTime;
 
-		if (!needUpdate) {
+		if (!needsUpdate) {
 
 			requestAnimationFrame(this._anim);
 			return;

@@ -2,6 +2,7 @@ import babel from 'rollup-plugin-babel'
 
 const license = `/*!
  * ScrambleText
+ * https://github.com/yomotsu/ScrambleText
  * (c) 2017 @yomotsu
  * Released under the MIT License.
  */`
