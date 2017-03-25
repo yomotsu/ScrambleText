@@ -13,7 +13,7 @@ Free version of Greensock's Scramble Text like text shuffle effect.
 
 ## Usage
 
-### with Standalone
+### as Standalone lib
 
 Copy ZipLoader.js from /dist/ZipLoader.js and place it in your project.
 
@@ -56,12 +56,14 @@ function startFx() {
 
 ### Constructor
 
-`ScrambleText( element, options )`
+```
+ScrambleText( element, options )
+```
 
 ### Options
 
-| param        | required |  |
-| ------------ | -------- |  |
+| param        | required |     |
+| ------------ | -------- | --- |
 | `timeOffset` | optional | relay between each steps in millisecons |
 | `chars`      | optional | array of custom characters |
 | `callback`   | optional | function that is called when ended the effect |
