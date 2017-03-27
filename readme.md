@@ -15,7 +15,7 @@ Free version of Greensock's Scramble Text like text shuffle effect.
 
 ### as Standalone lib
 
-Copy ZipLoader.js from /dist/ZipLoader.js and place it in your project.
+Copy ScrambleText.js from /dist/ScrambleText.js and place it in your project.
 
 ```
 <script src="./js/ScrambleText.js"></script>
