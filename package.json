@@ -19,9 +19,5 @@
     "watch": "rollup --config --watch",
     "build": "rollup --config",
     "release": "rollup --config && uglifyjs dist/ScrambleText.js -cm --preamble \"/*!\n * ScrambleText\n * https://github.com/yomotsu/ScrambleText\n * (c) 2017 @yomotsu\n * Released under the MIT License.\n */\" > dist/ScrambleText.min.js"
-  },
-  "engines": {
-    "node": "6.9.4",
-    "npm": "3.10.10"
   }
 }
