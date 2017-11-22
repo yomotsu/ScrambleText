@@ -3,7 +3,7 @@ const ATTR_RUNNING = 'data-scramble-text-running';
 
 class ScrambleText {
 
-	constructor ( el, option = {} ) {
+	constructor( el, option = {} ) {
 
 		this._startTime = 0;
 		this._elapsedTime = 0;
@@ -29,9 +29,9 @@ class ScrambleText {
 
 	}
 
-	play () {
+	play() {
 
-		if ( this._running ) { return this; }
+		if ( this._running ) return this;
 
 		this._idling = true;
 		this._running = true;
@@ -44,7 +44,7 @@ class ScrambleText {
 
 	}
 
-	start () {
+	start() {
 
 		this._idling = false;
 		this._startTime = Date.now();
@@ -56,7 +56,7 @@ class ScrambleText {
 
 	}
 
-	stop () {
+	stop() {
 
 		this._running = false;
 		this.el.removeAttribute( ATTR_IDLING );
@@ -69,7 +69,7 @@ class ScrambleText {
 }
 
 
-function anim () {
+function anim() {
 
 	const elapsedTime = Date.now() - this._startTime;
 	const deltaTime   = elapsedTime - this._elapsedTime;
@@ -85,11 +85,7 @@ function anim () {
 	this._elapsedTime = elapsedTime;
 	this._position = this._idling ? 0 : ( this._elapsedTime / this.timeOffset ) | 0;
 
-	if ( !this._running ) {
-
-		return;
-
-	}
+	if ( ! this._running ) return;
 
 	if ( this._position >= this._contents.length ) {
 
@@ -110,7 +106,7 @@ function anim () {
 }
 
 
-function suffle ( contents, chars, position ) {
+function suffle( contents, chars, position ) {
 
 	const textArray = [];
 
@@ -139,10 +135,10 @@ function suffle ( contents, chars, position ) {
 }
 
 
-function getRandCharacter ( chars ) {
+function getRandCharacter( chars ) {
 
 	const randNum = Math.floor( Math.random() * chars.length );
-	const lowChoice =	-.5 + Math.random();
+	const lowChoice =	- .5 + Math.random();
 	const picketCharacter = chars[ randNum ];
 	const choosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
 	return choosen;
@@ -150,7 +146,7 @@ function getRandCharacter ( chars ) {
 }
 
 
-function split ( string ) {
+function split( string ) {
 
 	const array = [];
 	const tag = /^(\s*)?<\/?[a-z](.*?)>(\s*)?/i;
