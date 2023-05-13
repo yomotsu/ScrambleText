@@ -126,6 +126,12 @@ function suffle( contents, chars, position ) {
 
 		}
 
+		if ( /\s/.test( contents[ i ].content ) ) {
+
+			textArray.push( contents[ i ].content );
+
+		}
+
 		textArray.push( getRandCharacter( chars ) );
 
 	}

@@ -41,9 +41,7 @@
 
 		ScrambleText.prototype.play = function play() {
 
-			if (this._running) {
-				return this;
-			}
+			if (this._running) return this;
 
 			this._idling = true;
 			this._running = true;
@@ -93,10 +91,7 @@
 		this._elapsedTime = elapsedTime;
 		this._position = this._idling ? 0 : this._elapsedTime / this.timeOffset | 0;
 
-		if (!this._running) {
-
-			return;
-		}
+		if (!this._running) return;
 
 		if (this._position >= this._contents.length) {
 
@@ -132,6 +127,11 @@
 
 				textArray.push(contents[i].content);
 				continue;
+			}
+
+			if (/\s/.test(contents[i].content)) {
+
+				textArray.push(contents[i].content);
 			}
 
 			textArray.push(getRandCharacter(chars));
